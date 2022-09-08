@@ -27,11 +27,11 @@ Package.create(name: "Yoga", description: "Training for calmness and flexibility
 
 # Reviews seeds
 
-Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
-Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
-Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
-Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
-Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.", trainer_id: 1)
+Review.create(title: "Best trainer", description: "Worst trainer I have ever encountered. Very impatient and unproffesional", trainer_id: 2)
+Review.create(title: "Best trainer", description: "This trainer helped me learn how to stay calm and relaxed which has helped me and my mental wellbeing. I have been able to cut down on my mass and build muscles through his guidance.", trainer_id: 3)
+Review.create(title: "Best trainer", description: "Unproffesional. Keeps giving sexual advances to all her male clients.", trainer_id: 4)
+Review.create(title: "Best trainer", description: "Otis is the best trainer. I have been able to cut down on my mass and build muscles through his guidance.", trainer_id: 4)
 
 
 

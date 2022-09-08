@@ -21,7 +21,17 @@ Trainer.create(name: "Suzan Atwoli", email: "atwoliS@gmail.com", gender: "female
 # Package seeds
 
 Package.create(name: "Bodybuilding", description: "Training with weights to build up muscle mass", amount: 3000)
+Package.create(name: "Cardio", description: "Training with minimal weights and multiple movements of the body", amount: 4000)
+Package.create(name: "Yoga", description: "Training for calmness and flexibility", amount: 5000)
 
+
+# Reviews seeds
+
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
+Review.create(title: "Best trainer", description: "Otis is the best bodybuiling and weighlifting trainer. I have been able to cut down on my mass and build muscles through his guidance.")
 
 
 

@@ -65,6 +65,39 @@ get "/trainers" do
 end
 
 
+# post for trainers
+
+post '/trainers' do
+  send = Trainer.create(
+    name: params[:name],
+    gender: params[:gender],
+    email: params[:email],
+  )
+  send.to_json
+end
+
+# put for trainers
+
+put '/trainers/:id' do
+  fix = Trainer.find(params[:id])
+  fix.update(
+    name: params[:name],
+    gender: params[:gender],
+    email: params[:email],
+  )
+  fix.to_json
+end
+
+
+# delete for trainers
+
+delete '/trainers/:id' do
+  deleted = Trainer.find(params[:id])
+  deleted.destroy
+  deleted.to_json
+end
+
+
 
 # gets for package
 
@@ -73,6 +106,37 @@ get "/packages" do
   packages.to_json
 end
 
+# post for package
+
+post '/packages' do
+  send = Package.create(
+    name: params[:name],
+    description: params[:description],
+    amount: params[:amount]
+  )
+  send.to_json
+end
+
+# put for packages
+
+put '/packages/:id' do
+  fix = Package.find(params[:id])
+  fix.update(
+    name: params[:name],
+    description: params[:description],
+    amount: params[:amount]
+  )
+  fix.to_json
+end
+
+
+# delete for packages
+
+delete '/packages/:id' do
+  deleted = Package.find(params[:id])
+  deleted.destroy
+  deleted.to_json
+end
 
 
 # gets for review
@@ -80,6 +144,30 @@ end
 get "/reviews" do
   reviews = Review.all   
   reviews.to_json
+end
+
+
+# post for review
+
+post '/reviews' do
+  send = Review.create(
+    title: params[:title],
+    description: params[:description],
+    trainer_id: params[:trainer_id]
+  )
+  send.to_json
+end
+
+# put for reviews
+
+put '/packages/:id' do
+  fix = Review.find(params[:id])
+  fix.update(
+    title: params[:title],
+    description: params[:description],
+    trainer_id: params[:trainer_id]
+  )
+  fix.to_json
 end
 
 

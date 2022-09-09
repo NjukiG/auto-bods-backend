@@ -160,7 +160,7 @@ end
 
 # put for reviews
 
-put '/packages/:id' do
+put '/reviews/:id' do
   fix = Review.find(params[:id])
   fix.update(
     title: params[:title],
@@ -170,6 +170,14 @@ put '/packages/:id' do
   fix.to_json
 end
 
+
+# delete for reviews
+
+delete '/reviews/:id' do
+  deleted = Review.find(params[:id])
+  deleted.destroy
+  deleted.to_json
+end
 
 
 end

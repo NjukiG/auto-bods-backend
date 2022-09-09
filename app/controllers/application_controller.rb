@@ -13,6 +13,8 @@ class ApplicationController < Sinatra::Base
     members.to_json
   end
 
+  # get members individually
+
   get '/members/:id' do
     member = Member.find(params[:id])
     member.to_json()
@@ -64,6 +66,13 @@ get "/trainers" do
   trainers.to_json
 end
 
+# get each trainer
+
+get '/trainers/:id' do
+  trainer = Trainer.find(params[:id])
+  trainer.to_json()
+end
+
 
 # post for trainers
 
@@ -106,6 +115,13 @@ get "/packages" do
   packages.to_json
 end
 
+# get each package by id
+
+get '/packages/:id' do
+  package = Package.find(params[:id])
+  package.to_json()
+end
+
 # post for package
 
 post '/packages' do
@@ -146,6 +162,12 @@ get "/reviews" do
   reviews.to_json
 end
 
+# get a single review by its id
+
+get '/reviews/:id' do
+  review = Review.find(params[:id])
+  review.to_json()
+end
 
 # post for review
 

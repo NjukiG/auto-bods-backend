@@ -15,10 +15,31 @@
 #   <<: *default
 #   database: db/production.sqlite3
 
+# development:
+#   adapter: sqlite3
+#   database: db/development.sqlite3
+
+# production:
+#   adapter: postgresql
+#   database: db/production.sqlite3
+
+
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  <<: *default
+  database: "db/development.sqlite3"
+
+test:
+  <<: *default
+  database: "db/test.sqlite3"
 
 production:
-  adapter: postgresql
-  database: db/production.sqlite3
+  <<: *default
+  database: d6kltua9hnm1sd
+  username: sqktxlyxjotgsl
+  host: ec2-3-217-113-25.compute-1.amazonaws.com
+  password: 6f0accf4cd1786dc312cb826e4c9bce7b7ac261934bae9121eb0d0383305df66

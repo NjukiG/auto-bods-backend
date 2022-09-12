@@ -52,9 +52,9 @@ group :development do
 end
 
 
-group :production do
-  gem "pg"
-end
+# group :production do
+#   gem "pg"
+# end
 
 # These gems will only be used when we are running tests
 group :test do
